@@ -6,11 +6,12 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'rebelot/kanagawa.nvim'
 
+Plug 'dylanaraps/wal.vim'
+
 call plug#end()
 
-" config sourcing
-let $CONFIG_DIR = "~/.config/nvim"
+" Config sourcing
+let $CONFIG_DIR = "~/.config/nvim/vimscript"
 source $CONFIG_DIR/keybindings.vim
 
 set number
-colorscheme kanagawa

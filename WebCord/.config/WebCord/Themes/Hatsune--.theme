@@ -1,0 +1,66 @@
+/**
+* @name Hatsune--
+* @version 1.0.0 
+* @description Hatsune con problemas de adicción; Un pequecho fork de FrostedGlass con aditivos negativos
+* @author KiraMantler
+*/
+
+@import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
+@import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
+@import url('https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css');
+
+:root {
+  --background-image: url('https://cdn.discordapp.com/attachments/898573605468770337/1193307028320440339/wallhaven-hatsune-malita.png');
+
+  --background-image-size: cover;
+  --background-image-position: center center;
+
+  --popout-modal-image: var(--background-image);
+  --popout-modal-blur: 1px;
+  --popout-modal-size: cover;
+  --popout-modal-position: top left;
+
+  --home-button-image: url('https://gibbu.github.io/BetterDiscord-Themes/FrostedGlass/assets/discord.svg');
+  --home-button-size: cover;
+  --home-button-position: center center;
+
+  --serverlist-brightness: 0.8;
+  --left-brightness: 0.7;
+  --middle-brightness: 0.6;
+  --right-brightness: 0.3;
+  --popout-modal-brightness: 0.75;
+
+  --gradient-primary: 148,187,233,100;
+  --gradient-secondary: 2,0,36,100;
+  --gradient-direction: 320deg;
+
+  --tint-colour: 255,51,159;
+  --tint-brightness: 0;
+
+  --window-padding: 5px;
+  --window-roundness: 20px;
+  --scrollbar-colour: rgb(126, 0, 189);
+  --link-colour: #9500ff;
+
+  --font: 'Arial';
+
+  --update-notice-1: none;
+
+
+  --HSL-server-icon-size: 42px;
+  --HSL-server-spacing: 15px;
+
+
+  --rs-small-spacing: 1px;
+  --rs-large-spacing: 3px;
+  --rs-width: 3px;
+  --rs-avatar-shape: 50%;
+  --rs-online-color: #00f7ff;
+  --rs-idle-color: #b700ff;
+  --rs-dnd-color: #ff0000;
+  --rs-offline-color: #9500ff;
+  --rs-streaming-color: #9500ff;
+  --rs-invisible-color: #747f8d;
+
+  --text-normal: rgb(254, 254, 254); /* color of default discord text */
+  }

@@ -39,4 +39,4 @@ zstyle ':completion::complete:*' gain-privileges 1 # enable sudo completitions
 #
 # Syntax highlighting
 #
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,0 +1,18 @@
+{
+    "label" : "logout",
+    "action" : "sleep 1; loginctl terminate-user $USER",
+    "text" : "Logout",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "sleep 1; systemctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "reboot",
+    "action" : "sleep 1; systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}

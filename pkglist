@@ -2,6 +2,9 @@ alsa-utils
 aurutils
 base
 base-devel
+brightnessctl
+ddcci-driver-linux-dkms
+ddcutil
 fzf
 go
 grc
@@ -9,7 +12,6 @@ htop
 hyprland
 hyprlang
 intel-ucode
-kitty
 lib32-pipewire
 librewolf-bin
 linux-zen
@@ -35,6 +37,7 @@ otf-opendyslexic-nerd
 otf-overpass-nerd
 pacman-contrib
 pavucontrol-qt
+pywal-16-colors
 qpwgraph
 qt5ct
 refind
@@ -42,6 +45,7 @@ reflector
 sdbus-cpp
 spotify-adblock
 steam
+stow
 terminus-font
 ttf-0xproto-nerd
 ttf-3270-nerd
