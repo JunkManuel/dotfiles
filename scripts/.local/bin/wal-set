@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+WALLPAPERS_DIR=~/wallpapers
+
+wal_opts () {
+  wal --saturate 0.85 --backend colorz --cols16 -nteq $@
+}
+
+if [ $# != 0 ]; then
+  wal_opts -i "$1"
+else
+  wal_opts -i "$WALLPAPERS_DIR/default.png"
+fi 
+
+bar >& /dev/null &
+
+swww img "$(< "${HOME}/.cache/wal/wal")" 

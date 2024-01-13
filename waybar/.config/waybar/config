@@ -5,7 +5,7 @@
     "width": 70,
     "modules-left": ["custom/pacman","tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["bluetooth","pulseaudio", "network", "custom/power", "clock"],
+    "modules-right": ["bluetooth","wireplumber", "network", "custom/power", "clock"],
     "spacing": 10,
     "hyprland/workspaces": {
         "active-only":false,
@@ -43,9 +43,14 @@
         "format": "{:%I:%M %p}",
         "tooltip-position": "right"
     },
-
+   "wireplumber": {
+	"format": "{volume}%",
+	"format-muted": "",
+	"on-click": "pavucontrol-qt",
+	"on-click-right": "~/.config/waybar/scripts/audio_changer.py"
+}, 
     "pulseaudio": {
-        "scroll-step": 0.5,
+        "scroll-step": 3,
         "format":"{icon}",
         "format-muted": "󰝟",
         "format-source": "{volume}% ",

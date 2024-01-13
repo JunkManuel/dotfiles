@@ -4,7 +4,7 @@ body,
 #waybar,
 .main-container {
   font-family: "FiraCode Nerd Font", "RobotoMono Nerd Font", sans-serif; 
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.5s ease-in-out;
   border: 3px solid @color11;
   border-radius: 20px;
@@ -39,18 +39,18 @@ window#waybar.hidden {
   font-weight: bold;
   font-style: normal;
   opacity: 0.8;
-  font-size: 16px;
+  font-size: 20px;
   color: @color7;
 }
 #workspaces button {
-  color: @color7;
+  color: @color11;
   background: transparent;
   transition: all 0.3s ease-in-out;
   opacity: 0.4;
 }
 
 #workspaces button.active {
-  background-color: @color11;
+  background-color: @color2;
   opacity: 0.9;
   margin: 8px;
   border-radius: 5px;
@@ -63,10 +63,30 @@ window#waybar.hidden {
 }
 
 #custom-pacman,
-#custom-power,
-#clock,
-#pulseaudio,
-#network,
+#custom-power {
+  color: @color10;
+  font-size: 24px;
+}
+
+#clock{
+  color: @color15;
+  font-size: 16px;
+}
+
+#pulseaudio {
+  color: @color10;
+  font-size: 24px;
+}
+
+#wireplumber {
+  color: @color10;
+  font-size: 16px;
+}
+
+#network {
+  color: @color10;
+  font-size: 24px;
+}
 #bluetooth.on,
 #bluetooth.connected {
   background-color: transparent;
@@ -79,6 +99,7 @@ window#waybar.hidden {
 
 #custom-pacman:hover,
 #custom-power:hover,
+
 #clock:hover {
   transition: all 0.3s ease-in-out;
   background: @background;
@@ -86,6 +107,11 @@ window#waybar.hidden {
 }
 
 #pulseaudio.muted {
+  background-color: @color11;
+  color: @color1;
+}
+
+#wireplumber.muted {
   background-color: @color11;
   color: @color1;
 }
@@ -104,17 +130,18 @@ window#waybar.hidden {
   padding-left: 11px;
 }
 */
+
 #pulseaudio {
-  padding-right: 4px;
+  padding-right: 2px;
 }
 
 #network {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 #clock {
-  margin-bottom: 20px;
-  font-size: 14px;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }
 
 #custom-power {

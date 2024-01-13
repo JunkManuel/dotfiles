@@ -1,19 +1,20 @@
 #window {
-	border: 3px solid rgba(--wofi-rgb-color1, 0.94);
-	background-color: rgba(--wofi-rgb-color1, 0.94);
+	border: 2px solid rgba(--wofi-rgb-color11, 0.95);
+	border-radius: 10;
+	background-color: rgba(--wofi-rgb-color0, 0.9);
 	font-size: 18px;
 	font-family: "Iosevka Term NFM Medium";
 }
 
 #outer-box {
-	margin: 3px;
+	margin: 5px;
 }
 
 #input {
 	border: 0;
-	border-radius: 0;
+	border-radius: 2;
 	background-color: transparent;
-	color: --wofi-color0;
+	color: --wofi-color11;
 	margin: 3px;
 }
 
@@ -26,19 +27,19 @@
 }
 
 #input:focus {
-	border-radius: 0;
+	border-radius: 5;
 }
 
 #entry {
-	color: --wofi-color0;
+	color: --wofi-color11;
 }
 
 #entry:selected {
-	background-color: rgba(--wofi-rgb-color0, 0.94);
+	background-color: rgba(--wofi-rgb-color6, 0.8);
 }
 
 #text:selected {
-	color: --wofi-color1;
+	color: --wofi-color10;
 }
 
 #img {
