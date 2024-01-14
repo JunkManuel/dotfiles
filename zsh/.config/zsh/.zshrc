@@ -8,6 +8,10 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 #
 # Ma lines
+# Sources
+#
+source ~/.config/zsh/keybinds.zshrc
+#
 # ls aliases
 #
 alias ls="ls --color=always"
