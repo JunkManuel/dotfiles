@@ -25,7 +25,8 @@ alias icat="kitty icat"
 # Load promp theming module
 #
 autoload -Uz promptinit && promptinit
-prompt adam2 8bit blue green red
+#prompt adam2 8bit blue green red
+prompt pure
 #
 # Load version control info (git)
 #

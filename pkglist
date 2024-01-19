@@ -112,4 +112,5 @@ xorg-xeyes
 yay
 ydotool
 zsh-completions
+zsh-pure-prompt
 zsh-syntax-highlighting
