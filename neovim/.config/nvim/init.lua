@@ -44,3 +44,6 @@ require('kanagawa').setup({
 
 -- Load kanagawa theme
 vim.cmd("colorscheme kanagawa-wave")
+
+-- Load lsp config
+require('lsp')
