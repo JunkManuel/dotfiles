@@ -6,6 +6,8 @@ brightnessctl
 ddcci-driver-linux-dkms
 ddcutil
 fzf
+gamemode
+glmark2
 go
 grc
 htop
@@ -22,8 +24,10 @@ mkinitcpio-firmware
 mkinitcpio-numlock
 neofetch
 neovim
+networkmanager-openvpn
 nm-connection-editor
 nvidia-dkms
+openrgb-bin
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -38,10 +42,12 @@ otf-opendyslexic-nerd
 otf-overpass-nerd
 pacman-contrib
 pavucontrol-qt
+pcmanfm-qt6-git
 protontricks
 python-pynput
 python-pyqt5
 pywal-16-colors
+qmk
 qpwgraph
 qt5ct
 qt6ct
@@ -51,6 +57,7 @@ spotify-adblock
 steam
 stow
 swww
+syncthing
 terminus-font
 ttf-0xproto-nerd
 ttf-3270-nerd
@@ -108,6 +115,7 @@ waybar
 webcord-bin
 wev
 wlogout
+xarchiver
 xorg-xeyes
 yay
 ydotool
