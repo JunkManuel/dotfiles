@@ -9,7 +9,7 @@ fi
 
 printf "Stow da shit out of the dirs or not? [y/N]" & read bool_stow
 bool_stow=$(echo -e "${bool_stow}" | tr -d '[:space:]') #Striped of spaces
-conf_dirs=( kitty neovim pywal scripts waybar WebCord wlogout wofi xdg-user-dirs zsh )
+conf_dirs=( kitty neovim pywal scripts waybar WebCord wlogout wofi xdg-user-dirs zsh pipewire )
 
 # install yay in case it is not installed
 if ! command -v yay >& /dev/null
