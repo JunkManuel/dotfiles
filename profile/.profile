@@ -4,4 +4,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # Set ssh env_vars
-SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
+export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
+
+# Set pass default store
+export PASSWORD_STORE_DIR=${HOME}/database/pass-store
