@@ -25,7 +25,6 @@ if command -v kitten >&/dev/null
 then
 	alias ssh="kitten ssh"
 fi
-alias ssh_oci="ssh ubuntu@kiramanolo.ddns.net -i /home/kiramanolo/.ssh/id_ed25519_ssh_oracle"
 #
 #Kitty aliases
 #
