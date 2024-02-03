@@ -7,4 +7,4 @@ fi
 export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
 
 # Set pass default store
-export PASSWORD_STORE_DIR=${HOME}/database/pass-store
+export PASSWORD_STORE_DIR=${HOME}/.password-store

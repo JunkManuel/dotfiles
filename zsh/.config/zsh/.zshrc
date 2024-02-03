@@ -18,6 +18,15 @@ alias ls="ls --color=always"
 alias la="ls --color=always -la"
 alias ll="ls --color=always -l"
 #
+# ssh aliases
+#
+alias ssh="env TERM=xterm-256color ssh"
+if command -v kitten >&/dev/null
+then
+	alias ssh="kitten ssh"
+fi
+alias ssh_oci="ssh ubuntu@kiramanolo.ddns.net -i /home/kiramanolo/.ssh/id_ed25519_ssh_oracle"
+#
 #Kitty aliases
 #
 alias icat="kitty icat"
