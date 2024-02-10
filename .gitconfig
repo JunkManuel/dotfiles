@@ -5,3 +5,4 @@
 	name = KiraManolo.AORUS
 [core]
 	editor = nvim
+	sshCommand = /usr/bin/ssh

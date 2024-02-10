@@ -32,6 +32,7 @@ htop
 hyprland
 hyprlang
 imagemagick
+inkscape
 intel-ucode
 jedi-language-server
 kitty
@@ -57,6 +58,8 @@ networkmanager-openvpn
 nm-connection-editor
 noise-suppression-for-voice
 nvidia-dkms
+nwg-look-bin
+nwg-look-bin-debug
 openrgb-bin
 openssh
 otf-aurulent-nerd

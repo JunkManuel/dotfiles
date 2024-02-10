@@ -21,7 +21,7 @@ alias ll="ls --color=always -l"
 # ssh aliases
 #
 alias ssh="env TERM=xterm-256color ssh"
-if command -v kitten >&/dev/null
+if command -v kitten >&/dev/null && [ "$TERM" = "xterm-kitty" ]
 then
 	alias ssh="kitten ssh"
 fi
