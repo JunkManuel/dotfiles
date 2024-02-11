@@ -40,7 +40,7 @@
     "clock": {
         "timezone": "Europe/Madrid",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%I:%M %p}",
+        "format": "{:%OI:%M}",
         "tooltip-position": "right"
     },
    "wireplumber": {
