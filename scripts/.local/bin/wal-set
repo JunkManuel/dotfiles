@@ -13,4 +13,4 @@ fi
 
 bar >& /dev/null &
 
-swww init & swww img "$(< "${HOME}/.cache/wal/wal")" 
+swww img "$(< "${HOME}/.cache/wal/wal")" 
