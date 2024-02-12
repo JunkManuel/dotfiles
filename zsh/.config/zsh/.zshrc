@@ -18,6 +18,10 @@ alias ls="ls --color=always"
 alias la="ls --color=always -la"
 alias ll="ls --color=always -l"
 #
+# diff alias for unified fileformat
+#
+alias diff="diff -Naur"
+#
 # ssh aliases
 #
 alias ssh="env TERM=xterm-256color ssh"
@@ -26,7 +30,7 @@ then
 	alias ssh="kitten ssh"
 fi
 #
-#Kitty aliases
+# Kitty aliases
 #
 alias icat="kitty icat"
 #

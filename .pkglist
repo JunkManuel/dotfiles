@@ -59,7 +59,6 @@ nm-connection-editor
 noise-suppression-for-voice
 nvidia-dkms
 nwg-look-bin
-nwg-look-bin-debug
 openrgb-bin
 openssh
 otf-aurulent-nerd
@@ -124,6 +123,7 @@ steam
 stow
 swh-plugins
 swww
+swww-debug
 syncthing
 terminus-font
 ttf-0xproto-nerd

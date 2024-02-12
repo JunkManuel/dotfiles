@@ -2,7 +2,13 @@
 local lspconfig = require('lspconfig')
 
 -- Python language server
-lspconfig.jedi_language_server.setup {}
+lspconfig.jedi_language_server.setup {
+	init_options = {
+		diagnostics = {
+			enable = true
+		},
+	},
+}
 
 -- Lua language server
 lspconfig.lua_ls.setup {}
