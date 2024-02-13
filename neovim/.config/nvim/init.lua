@@ -1,7 +1,12 @@
+-------------------------
 -- Load all vimscript config
+-------------------------
 vim.cmd("source ~/.config/nvim/vimscript/init.vim")
 
--- Setup kanagawa theme
+
+-------------------------
+-- Kanagawa theme config
+-------------------------
 require('kanagawa').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
@@ -11,25 +16,25 @@ require('kanagawa').setup({
     statementStyle = { bold = true },
     typeStyle = {},
     transparent = true,         -- do not set background color
-    dimInactive = true,         -- dim inactive window `:h hl-NormalNC`
+    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
         palette = {},
         theme = { wave = {}, lotus = {}, dragon = {}, all = { ui = { bg_gutter = "none" } } },
     },
     overrides = function(colors) -- add/modify highlights
-	local theme = colors.theme	
+	local theme = colors.theme
         return {
             NormalFloat = { bg = "none" },
             FloatBorder = { bg = "none" },
             FloatTitle = { bg = "none" },
-    
+
             -- Save an hlgroup with dark background and dimmed foreground
             -- so that you can use it where your still want darker windows.
             -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
             NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-    
-            -- Popular plugins that open floats will link to NormalFloat by default;
+
+	    -- Popular plugins that open floats will link to NormalFloat by default;
             -- set their background accordingly if you wish to keep them dark and borderless
             LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
             MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
@@ -42,8 +47,9 @@ require('kanagawa').setup({
     },
 })
 
--- Load kanagawa theme
 vim.cmd("colorscheme kanagawa-wave")
 
+-------------------------
 -- Load lsp config
+-------------------------
 require('lsp')

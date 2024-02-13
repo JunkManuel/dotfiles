@@ -10,6 +10,7 @@ coreutils
 cups
 ddcci-driver-linux-dkms
 ddcutil
+devtools
 dkms
 docker
 docker-compose
@@ -123,7 +124,6 @@ steam
 stow
 swh-plugins
 swww
-swww-debug
 syncthing
 terminus-font
 ttf-0xproto-nerd

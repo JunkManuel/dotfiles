@@ -18,9 +18,10 @@ alias ls="ls --color=always"
 alias la="ls --color=always -la"
 alias ll="ls --color=always -l"
 #
-# diff alias for unified fileformat
+# diff-patch alias for unified fileformat
 #
-alias diff="diff -Naur"
+alias udiff="diff -Naur"
+alias upatch="patch -uNp1"
 #
 # ssh aliases
 #

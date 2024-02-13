@@ -1,7 +1,12 @@
--- Setup language servers.
+--------------------------
+-- Setup lsp
+--------------------------
 local lspconfig = require('lspconfig')
+require("lsp-ui")
 
+-------------------------
 -- Python language server
+-------------------------
 lspconfig.jedi_language_server.setup {
 	init_options = {
 		diagnostics = {
@@ -10,13 +15,19 @@ lspconfig.jedi_language_server.setup {
 	},
 }
 
+-------------------------
 -- Lua language server
+-------------------------
 lspconfig.lua_ls.setup {}
 
+-------------------------
 -- VimScript language server
+-------------------------
 lspconfig.vimls.setup {}
 
+-------------------------
 -- dockerfiles language server
+-------------------------
 lspconfig.dockerls.setup {}
 lspconfig.docker_compose_language_service.setup {
 	filetypes = { "yaml.docker-compose" },
@@ -35,3 +46,8 @@ function docker_fix()
 end
 
 vim.cmd[[au BufRead * lua docker_fix()]]
+
+
+-------------------------
+-- 
+-------------------------
