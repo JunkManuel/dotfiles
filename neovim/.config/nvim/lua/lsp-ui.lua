@@ -1,8 +1,8 @@
---------------------------
 -- UI customizations for LSP
---------------------------
 
+--------------------------
 -- floating windows borders
+--------------------------
 
 local _border = {
 	{"🭽", "FloatBorder"},
@@ -31,7 +31,62 @@ vim.diagnostic.config{
   	float={border=_border}
 }
 
-
 require('lspconfig.ui.windows').default_options = {
   	border = _border
 }
+
+--------------------------
+-- Completition Kinds icons
+--------------------------
+
+local _icons = {
+  Class = " ",
+  Color = " ",
+  Constant = " ",
+  Constructor = " ",
+  Enum = " ",
+  EnumMember = " ",
+  Field = "󰄶 ",
+  File = " ",
+  Folder = " ",
+  Function = " ",
+  Interface = "󰜰",
+  Keyword = "󰌆 ",
+  Method = "ƒ ",
+  Module = "󰏗 ",
+  Property = " ",
+  Snippet = "󰘍 ",
+  Struct = " ",
+  Text = " ",
+  Unit = " ",
+  Value = "󰎠 ",
+  Variable = " ",
+}
+
+
+local kinds = vim.lsp.protocol.CompletionItemKind
+for i, kind in ipairs(kinds) do
+	kinds[i] = _icons[kind] or kind
+end
+
+
+--------------------------
+-- Diagnostics display
+--------------------------
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = false,
+})
+
+
+--------------------------
+-- Diagnostics symbols on gutter
+--------------------------
+local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
