@@ -16,8 +16,14 @@ call plug#end()
 let $CONFIG_DIR = "~/.config/nvim/vimscript"
 source $CONFIG_DIR/keybindings.vim
 
+" show numbers on screenborder
 set number
 
+" open new windows below current one per default
 set splitbelow
 
+" use xclip as neovim clipboard
 set clipboard+=unnamedplus
+
+" set tabsize to 4
+set tabstop=4
