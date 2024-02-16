@@ -54,6 +54,8 @@ man-pages
 mkinitcpio-firmware
 mkinitcpio-numlock
 mpv
+mullvad-vpn
+mullvad-vpn-debug
 neofetch
 neovim
 network-manager-applet
