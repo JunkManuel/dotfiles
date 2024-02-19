@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 # set user PATH
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -8,3 +9,6 @@ export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
 
 # Set pass default store
 export PASSWORD_STORE_DIR=${HOME}/.password-store
+
+#
+export EDITOR=nvim
