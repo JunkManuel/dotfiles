@@ -10,7 +10,7 @@ fi
 # install yay in case it is not installed
 if ! command -v yay >& /dev/null
 then
-	tmp = $(mktemp -d)
+	tmp=$(mktemp -d)
 	git clone https://aur.archlinux.org/yay.git $tmp
 	cd $tmp && makepkg -si
 fi
@@ -19,12 +19,12 @@ fi
 cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 cd ..
 
-config_dirs=( zsh neovim profile scripts )
+config_dirs=( zsh neovim profile scripts pywal)
 
-for dir in config_dirs;
+for dir in ${config_dirs[@]};
 do
-	stow -t $HOME dir
+	stow -t $HOME $dir
 done
 
-yay -Syy
-yay -S --needed --noconfirm < install/shell.pkglist
+yay -Sy
+yay -S --needed --noconfirm $({cat install/shell.pkglist})

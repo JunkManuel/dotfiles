@@ -6,6 +6,9 @@ efibootmgr
 fzf
 jedi-language-server
 lua-language-server
+vim-language-server
+neovim
+neovim-plug
 man-db
 man-pages
 openssh
@@ -19,3 +22,5 @@ zsh
 zsh-completions
 zsh-pure-prompt
 zsh-syntax-highlighting
+pywal-16-colors
+colorz
