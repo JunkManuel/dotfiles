@@ -19,4 +19,4 @@ nnoremap <C-l> <C-w>k
 nnoremap <C-ñ> <C-w>l
 
 " Open terminal
-map <C-Return> :new +resize10 term://zsh<Return>
+noremap <C-T> :new +resize10 term://zsh<cr>
