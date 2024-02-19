@@ -1,0 +1,5 @@
+[Unit]
+Description=Run autostart desktop apps
+
+[Timer]
+OnActiveSec=5s
