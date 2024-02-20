@@ -10,6 +10,8 @@ Plug 'dylanaraps/wal.vim'
 
 Plug 'neovim/nvim-lspconfig'
 
+Plug 'norcalli/nvim-colorizer.lua'
+
 call plug#end()
 
 " Config sourcing
@@ -27,3 +29,9 @@ set clipboard+=unnamedplus
 
 " set tabsize to 4
 set tabstop=4
+
+" folding with sentidiño xd
+set foldmethod=marker
+
+" enable 24bit coloration on terminal
+set termguicolors
