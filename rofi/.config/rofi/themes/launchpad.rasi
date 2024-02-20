@@ -5,10 +5,13 @@ element {
     padding: 		8px ;
     spacing: 		4px ;
     border-radius:  16px;
+	border:			2px;
+	border-color:	transparent;
 
 	orientation:	vertical;
     cursor:  		pointer;
 }
+/*element normal{{{*/
 element normal.normal {
     background-color: var(normal-background);
     text-color:       var(normal-foreground);
@@ -20,19 +23,10 @@ element normal.urgent {
 element normal.active {
     background-color: var(active-background);
     text-color:       var(active-foreground);
+	border-color:	  var(active-border-color);
 }
-element selected.normal {
-    background-color: var(selected-normal-background);
-    text-color:       var(selected-normal-foreground);
-}
-element selected.urgent {
-    background-color: var(selected-urgent-background);
-    text-color:       var(selected-urgent-foreground);
-}
-element selected.active {
-    background-color: var(selected-active-background);
-    text-color:       var(selected-active-foreground);
-}
+/*}}}*/
+/*element alternate{{{*/
 element alternate.normal {
     background-color: var(alternate-normal-background);
     text-color:       var(alternate-normal-foreground);
@@ -44,7 +38,24 @@ element alternate.urgent {
 element alternate.active {
     background-color: var(alternate-active-background);
     text-color:       var(alternate-active-foreground);
+	border-color:	  var(alternate-active-border-color);
 }
+/*}}}*/
+/*element selected{{{*/
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(selected-urgent-foreground);
+}
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(selected-active-foreground);
+	border-color:	  var(selected-active-border-color);
+}
+/*}}}*/
 element-text {
     background-color: transparent;
     cursor:           inherit;
@@ -63,26 +74,30 @@ element-icon {
 }
 /*}}}*/
 
-
+/*{{{*/
 window {
-    background-color: var(background);
+    background-color: transparent;
     border:           1;
-	
+
     fullscreen: true;
     padding: 1em;
 }
 
 mainbox {
+    background-color: transparent;
+
     padding:  8px;
-	background-color: #00000000;
 }
 
 listview {
+    background-color: transparent;
+
     margin:   48px calc( 50% - 560px );
     spacing:  48px;
     columns:  6;
     fixed-columns: true;
 }
+/*}}}*/
 
 /*Input Bar {{{*/
 inputbar {
