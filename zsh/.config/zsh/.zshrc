@@ -11,6 +11,7 @@ bindkey -v
 # Sources
 #
 source ~/.config/zsh/keybinds.zshrc
+source ~/.env
 #
 # ls aliases
 #

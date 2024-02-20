@@ -1,6 +1,0 @@
-[Unit]
-Description="Imperative shit"
-Wants=xdg-desktop-autostart.target
-
-[Service]
-ExecStart=sh -c "while [ 1 ];do sleep 1;done"

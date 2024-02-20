@@ -1,8 +1,0 @@
-[Unit]
-Description=%p
-BindsTo=graphical-session.target
-
-[Service]
-Type=notify
-EnvironmentFile=%h/.env
-ExecStart=/usr/bin/Hyprland
