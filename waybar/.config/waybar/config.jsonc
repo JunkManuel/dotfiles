@@ -3,7 +3,6 @@
     "position": "left",
     "margin": "10 0 10 5", 
 	"width": 70,
-	"mode": "dock",
     "modules-left": ["custom/pacman","tray"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["bluetooth","wireplumber","clock","custom/power"],
@@ -46,8 +45,8 @@
 	"format": "{volume}%",
 	"format-muted": "",
 	"on-click": "pavucontrol-qt",
-	"on-click-right": "~/.config/waybar/scripts/audio_changer.py",
-}, 
+	"on-click-right": "~/.config/waybar/scripts/audio_changer.py"
+		}, 
     "pulseaudio": {
         "scroll-step": 3,
         "format":"{icon}",
