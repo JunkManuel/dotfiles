@@ -1,12 +1,14 @@
 " Vim-Plug plugins
 call plug#begin()
 
-Plug 'junegunn/fzf' , { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf' , { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 Plug 'rebelot/kanagawa.nvim'
 
-Plug 'dylanaraps/wal.vim'
+" Plug 'dylanaraps/wal.vim'
+
+Plug 'numToStr/Comment.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 
