@@ -6,5 +6,5 @@ if [ $? -eq 0 ]; then
 		sh -c "~/.local/bin/reload-bar"
 else
 		# echo "nn hay proceso"
-		sh -c "/usr/bin/waybar -c ~/.config/waybar/config.jsonc >& $(mktemp --suffix=.waybar.log)" &
+		sh -c "/usr/bin/waybar -c ~/.config/waybar/config >& $(mktemp --suffix=.waybar.log)" &
 fi
