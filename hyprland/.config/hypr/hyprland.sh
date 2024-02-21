@@ -31,4 +31,4 @@ export GTK_THEME=Arc-Dark
 # [ ! -f /run/udev/data/+drm:card0-eDP-1 ] \
 #  && echo "Hyprland needs drm, bailing out" && exit -1
 
-exec Hyprland > .hyprland.log.txt 2> .hyprland.err.txt
+exec Hyprland > ~/.hyprland.out.log 2> ~/.hyprland.err.log
