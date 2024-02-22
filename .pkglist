@@ -17,6 +17,7 @@ dkms
 docker
 docker-compose
 dockerfile-language-server-bin
+dunst
 efibootmgr
 exfat-utils
 foomatic-db-gutenprint-ppds
@@ -49,6 +50,7 @@ linux-firmware
 linux-zen
 linux-zen-headers
 lua-language-server
+lxqt-policykit
 man-db
 man-pages
 mkinitcpio-firmware
