@@ -1,40 +1,50 @@
 @import '../../.cache/wal/colors-waybar.css';
 
+/*Defaults + main container{{{*/
 body,
 #waybar,
 .main-container {
-  font-family: "FiraCode Nerd Font", "RobotoMono Nerd Font", sans-serif; 
-  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "iMWrittingMono Nerd Font Mono",  sans-serif; 
+
+  /* Border */
+  border: 3px solid transparent;
+  /* border-radius: 30px 10px 10px 30px; */
+  border-image: linear-gradient(to bottom, @color13 , @color12, @color11) 30%;
+
+  background-color: rgba(0, 0, 0, 0.6);
   transition: background-color 0.5s ease-in-out;
-  border: 3px solid @color11;
-  border-radius: 20px;
 }
 
+/*
 #waybar:hover,
 .main-container:hover {
-  background-color: rgba(0, 0, 0, 0.9);  /* Slightly darker background on hover */
+  background-color: rgba(0, 0, 0, 0.9);  *//* Slightly darker background on hover *//*
 }
+*/
 
-#workspaces,
-#custom-pacman,
-#custom-rofi,
-#custom-color_toggle,
-#custom-power,
-#clock,
-#pulseaudio,
-#network,
-#bluetooth.on,
-#bluetooth.connected,
-#network.ethernet,
-#network.wifi {
-  border-width: 0;
-}
 
 window#waybar.hidden {
   opacity: 0.2;
 }
+/*}}}*/
 
-#workspaces {
+/*Hover effects {{{*/
+/*
+
+This shit does not work until #1120(https://github.com/Alexays/Waybar/pull/1120) is yet again merged
+
+#custom-pacman:hover,
+#custom-power:hover,
+#clock:hover {
+  transition: all 0.3s ease-in-out;
+  background: @background;
+  color: @color15;
+}
+*/
+/*}}}*/
+
+#workspaces /*{{{*/{
+  border-width: 0;
   background: transparent;
   font-weight: bold;
   font-style: normal;
@@ -42,8 +52,8 @@ window#waybar.hidden {
   font-size: 20px;
   color: @color7;
 }
-#workspaces button {
-  color: @color11;
+#workspaces button /*{{{*/ {
+  color: @color2;
   background: transparent;
   transition: all 0.3s ease-in-out;
   opacity: 0.4;
@@ -51,6 +61,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   background-color: @color2;
+  color: @color13;
   opacity: 0.9;
   margin: 8px;
   border-radius: 5px;
@@ -61,32 +72,85 @@ window#waybar.hidden {
   margin-left: 4px;
   color: @color15;
 }
+/*}}}*/
+/*}}}*/
 
-#custom-pacman,
+/*Tray{{{*/
+#tray {
+  margin-top: 10px;
+}
+/*}}}*/
+
+/*Custom + Clock{{{*/
+#custom-pacman {
+  border-width: 0;
+  color: @color11;
+  font-size: 22px;
+
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
 #custom-power {
-  color: @color10;
-  font-size: 24px;
+  border-width: 0;
+  margin-bottom: 10px;
+  color: @color6;
+  font-size: 30px;
 }
 
 #clock{
-  color: @color15;
-  font-size: 16px;
+  color: @color10;
+  font-size: 18px;
+  border-width: 0;
+  margin-top: 5px;
 }
+/*}}}*/
 
-#pulseaudio {
+/*Audio {{{*/
+/*
+#pulseaudio *//*{{{*//* {
   color: @color10;
   font-size: 24px;
+  border-width: 0;
+  padding-left: 11px;
+  padding-right: 2px;
 }
 
-#wireplumber {
+#pulseaudio.muted {
+  background-color: @color11;
+  color: @color1;
+}
+*/
+/*}}}*/
+#wireplumber /*{{{*/{
   color: @color10;
-  font-size: 16px;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
+#wireplumber.muted {
+  background-color: @color11;
+  color: @color1;
+}
+/*}}}*/
+/*}}}*/
 
-#network {
+#network /*{{{*/ {
   color: @color10;
   font-size: 24px;
+  padding-right: 4px;
+  border-width: 0;
 }
+#network.ethernet { 
+  border-width: 0;
+}
+#network.wifi {
+  border-width: 0;
+}
+/*}}}*/
+
+/*Bluetooth{{{*/
+/*
 #bluetooth.on,
 #bluetooth.connected {
   background-color: transparent;
@@ -95,55 +159,10 @@ window#waybar.hidden {
   opacity: 0.8;
   padding: 0px;
   font-size: 24px;
+  border-width: 0;
 }
-
-#custom-pacman:hover,
-#custom-power:hover,
-
-#clock:hover {
-  transition: all 0.3s ease-in-out;
-  background: @background;
-  color: @color1;
-}
-
-#pulseaudio.muted {
-  background-color: @color11;
-  color: @color1;
-}
-
-#wireplumber.muted {
-  background-color: @color11;
-  color: @color1;
-}
-
 #bluetooth.off {
   background-color: @color5;
 }
-
-#custom-pacman {
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-/*
-#pulseaudio {
-  padding-left: 11px;
-}
 */
-
-#pulseaudio {
-  padding-right: 2px;
-}
-
-#network {
-  padding-right: 4px;
-}
-
-#clock {
-  padding-left: 10px;
-  margin-bottom: 15px;
-}
-
-#custom-power {
-  padding-right: 2px;
-}
+/*}}}*/

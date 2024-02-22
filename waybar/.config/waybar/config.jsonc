@@ -1,12 +1,12 @@
 {
     "layer": "top",
     "position": "left",
-    "margin": "10 0 10 10",
-    "width": 70,
+    "margin": "10 0 10 5", 
+	"width": 70,
     "modules-left": ["custom/pacman","tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["bluetooth","wireplumber", "custom/power", "clock"],
-    "spacing": 10,
+    "modules-right": ["bluetooth","wireplumber","clock","custom/power"],
+    "spacing": 5,
     "hyprland/workspaces": {
         "active-only":false,
         "all-outputs": false,
@@ -41,14 +41,14 @@
         "timezone": "Europe/Madrid",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%OI:%M}",
-        "tooltip-position": "right"
+        "tooltip-position": "center"
     },
    "wireplumber": {
 	"format": "{volume}%",
 	"format-muted": "",
 	"on-click": "pavucontrol-qt",
 	"on-click-right": "~/.config/waybar/scripts/audio_changer.py"
-}, 
+		}, 
     "pulseaudio": {
         "scroll-step": 3,
         "format":"{icon}",
@@ -88,6 +88,6 @@
     },
     "tray": {
         "icon-size": 25,
-	"spacing": 15
+		"spacing": 15
     }
 }
