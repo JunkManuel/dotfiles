@@ -1,14 +1,18 @@
 " Vim-Plug plugins
 call plug#begin()
 
-Plug 'junegunn/fzf' , { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf' , { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 Plug 'rebelot/kanagawa.nvim'
 
-Plug 'dylanaraps/wal.vim'
+" Plug 'dylanaraps/wal.vim'
+
+Plug 'numToStr/Comment.nvim'
 
 Plug 'neovim/nvim-lspconfig'
+
+Plug 'norcalli/nvim-colorizer.lua'
 
 call plug#end()
 
@@ -27,3 +31,9 @@ set clipboard+=unnamedplus
 
 " set tabsize to 4
 set tabstop=4
+
+" folding with sentidiño xd
+set foldmethod=marker
+
+" enable 24bit coloration on terminal
+set termguicolors

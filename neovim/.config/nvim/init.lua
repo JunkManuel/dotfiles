@@ -53,3 +53,73 @@ vim.cmd("colorscheme kanagawa-wave")
 -- Load lsp config
 -------------------------
 require('lsp')
+
+-------------------------
+-- Load colorizer
+-------------------------
+require 'colorizer'.setup({'*'},
+{
+				RGB      = true;         -- #RGB hex codes
+				RRGGBB   = true;         -- #RRGGBB hex codes
+				names    = true;         -- "Name" codes like Blue
+				RRGGBBAA = true;        -- #RRGGBBAA hex codes
+				rgb_fn   = false;        -- CSS rgb() and rgba() functions
+				hsl_fn   = false;        -- CSS hsl() and hsla() functions
+				css      = false;        -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+				css_fn   = false;        -- Enable all CSS *functions*: rgb_fn, hsl_fn
+				-- Available modes: foreground, background
+				mode     = 'background'; -- Set the display mode.
+}
+)
+
+-------------------------
+-- Load commenter
+-------------------------
+require 'Comment'.setup(
+{
+    ---Add a space b/w comment and the line
+    padding = true,
+    ---Whether the cursor should stay at its position
+    sticky = true,
+    ---Lines to be ignored while (un)comment
+    ignore = nil,
+    ---LHS of toggle mappings in NORMAL mode
+    toggler = {
+        ---Line-comment toggle keymap
+        line = 'cc',
+        ---Block-comment toggle keymap
+        block = 'cb',
+    },
+    ---LHS of operator-pending mappings in NORMAL and VISUAL mode
+    opleader = {
+        ---Line-comment keymap
+        line = 'cc',
+        ---Block-comment keymap
+        block = 'cb',
+    },
+    ---LHS of extra mappings
+    extra = {
+        ---Add comment on the line above
+        above = 'gcO',
+        ---Add comment on the line below
+        below = 'gco',
+        ---Add comment at the end of line
+        eol = 'gcA',
+    },
+    ---Enable keybindings
+    ---NOTE: If given `false` then the plugin won't create any mappings
+    mappings = {
+        ---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
+        basic = true,
+        ---Extra mapping; `gco`, `gcO`, `gcA`
+        extra = true,
+    },
+    ---Function to call before (un)comment
+    pre_hook = nil,
+    ---Function to call after (un)comment
+    post_hook = nil,
+}
+)
+
+
+
