@@ -1,0 +1,10 @@
+[Unit]
+Description=Dunst Notification daemon
+Documentation=man:dunst(1)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dunst -print --startup_notification
+
+[Install]
+WantedBy=graphical-session.target
