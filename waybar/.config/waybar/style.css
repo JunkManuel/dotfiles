@@ -9,7 +9,7 @@ body,
   /* Border */
   border: 3px solid transparent;
   /* border-radius: 30px 10px 10px 30px; */
-  border-image: linear-gradient(to bottom, @color13 , @color12, @color11) 30%;
+  border-image: linear-gradient(97deg, @color13, @color11, @color9) 30%;
 
   background-color: rgba(0, 0, 0, 0.6);
   transition: background-color 0.5s ease-in-out;
