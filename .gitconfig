@@ -1,8 +1,0 @@
-[init]
-	defaultbranch = master
-[user]
-	email = 21977499+JunkManuel@users.noreply.github.com
-	name = KiraManolo.AORUS
-[core]
-	editor = nvim
-	sshCommand = /usr/bin/ssh
