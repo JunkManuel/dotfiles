@@ -53,9 +53,9 @@ man-db
 man-pages
 mkinitcpio-firmware
 mkinitcpio-numlock
+moka-icon-theme-git
 mpv
 mullvad-vpn
-mullvad-vpn-debug
 neofetch
 neovim
 network-manager-applet
@@ -90,6 +90,7 @@ pipewire-alsa
 pipewire-audio
 pipewire-docs
 pipewire-pulse
+posy-cursors
 protontricks
 pulseaudio-ctl
 pyenv
@@ -122,6 +123,7 @@ qt6-wayland
 qt6ct
 refind
 reflector
+rofi-lbonn-wayland-only-git
 sdbus-cpp
 skanpage
 spotify-adblock
