@@ -43,15 +43,15 @@ element alternate.active {
 /*}}}*/
 /*element selected{{{*/
 element selected.normal {
-    background-color: var(selected-normal-background);
+    background-image: var(selected-normal-background);
     text-color:       var(selected-normal-foreground);
 }
 element selected.urgent {
-    background-color: var(selected-urgent-background);
+    background-image: var(selected-urgent-background);
     text-color:       var(selected-urgent-foreground);
 }
 element selected.active {
-    background-color: var(selected-active-background);
+    background-image: var(selected-active-background);
     text-color:       var(selected-active-foreground);
 	border-color:	  var(selected-active-border-color);
 }
