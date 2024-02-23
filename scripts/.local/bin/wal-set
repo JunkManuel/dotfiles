@@ -11,6 +11,6 @@ else
   wal_opts -i "$WALLPAPERS_DIR/default.png"
 fi 
 
-~/.local/bin/bar >& /dev/null &
+~/.local/bin/bar
 
 /usr/bin/swww img "$(< "${HOME}/.cache/wal/wal")" 
