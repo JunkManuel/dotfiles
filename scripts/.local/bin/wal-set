@@ -13,4 +13,4 @@ fi
 
 ~/.local/bin/bar >& /dev/null &
 
-/usr/bin/swww img "$(< "${HOME}/.cache/wal/wal")" 
+/usr/bin/swww img $(cat $HOME/.cache/wal/wal)
