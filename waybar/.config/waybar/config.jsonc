@@ -42,10 +42,11 @@
         "tooltip-position": "center"
     },
    "wireplumber": {
-	"format": "{volume}%",
-	"format-muted": "",
+	"format": "{volume}% ",
+	"format-muted": "󰝟",
 	"on-click": "pavucontrol-qt",
-	"on-click-right": "~/.config/waybar/scripts/audio_changer.py"
+	"on-click-right": "~/.config/waybar/scripts/audio_changer.py",
+	"align": 0.45
 		}, 
     "pulseaudio": {
         "scroll-step": 3,

@@ -84,13 +84,14 @@ This shit does not work until #1120(https://github.com/Alexays/Waybar/pull/1120)
 /*Battery{{{*/
 #battery {
   border-width: 0;
-  color:@color11;
+  color:@color10;
   font-size:16px
 }
 #battery.warning{
   color:@color14
 }
 #battery.critical{
+  background-color: red;
   color:@color15
 }
 /*}}}*/
