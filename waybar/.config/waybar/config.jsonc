@@ -5,8 +5,8 @@
 	"width": 70,
     "modules-left": ["custom/pacman","tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["bluetooth","wireplumber","clock","custom/power"],
-    "spacing": 5,
+    "modules-right": ["bluetooth","battery","wireplumber","clock","custom/power"],
+    "spacing": 10,
     "hyprland/workspaces": {
         "active-only":false,
         "all-outputs": false,
@@ -15,8 +15,6 @@
 	"format": "{icon}",
 	"format-icons": {
 		"1":"󰈹",
-		"2":"",
-		"3":"󰓓",
 		"default":""
 	},
         "persistent-workspaces":{
@@ -44,10 +42,11 @@
         "tooltip-position": "center"
     },
    "wireplumber": {
-	"format": "{volume}%",
-	"format-muted": "",
+	"format": "{volume}% ",
+	"format-muted": "󰝟",
 	"on-click": "pavucontrol-qt",
-	"on-click-right": "~/.config/waybar/scripts/audio_changer.py"
+	"on-click-right": "~/.config/waybar/scripts/audio_changer.py",
+	"align": 0.45
 		}, 
     "pulseaudio": {
         "scroll-step": 3,
@@ -89,5 +88,17 @@
     "tray": {
         "icon-size": 25,
 		"spacing": 15
-    }
+    },
+	"battery": {
+		"bat": "BAT0",
+		"interval": 30,
+		"states": {
+				"warning": 25,
+				"critical": 10
+		},
+		"format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""],
+		"max-length": 25,
+		"align": 0.3
+	}
 }
