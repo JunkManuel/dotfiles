@@ -11,6 +11,8 @@ else
   wal_opts -i "$WALLPAPERS_DIR/default.png"
 fi 
 
-~/.local/bin/bar >& /dev/null &
+~/.local/bin/bar
+
+systemctl --user restart dunst
 
 /usr/bin/swww img $(cat $HOME/.cache/wal/wal)

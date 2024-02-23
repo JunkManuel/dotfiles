@@ -4,7 +4,7 @@ Documentation=man:dunst(1)
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/dunst -print --startup_notification
+ExecStart=%h/.local/bin/notification-daemon
 
 [Install]
 WantedBy=graphical-session.target
