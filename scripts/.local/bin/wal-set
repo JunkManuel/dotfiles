@@ -13,4 +13,6 @@ fi
 
 ~/.local/bin/bar
 
-/usr/bin/swww img "$(< "${HOME}/.cache/wal/wal")" 
+systemctl --user restart dunst
+
+/usr/bin/swww img $(cat $HOME/.cache/wal/wal)
