@@ -22,11 +22,10 @@ button {
 	color: @color15;
     font-size:20px;
 
-	background-color: rgba(12, 12, 12, 0.4);
+	background-color: rgba(12, 12, 12, 0.2);
     background-repeat: no-repeat;
 	background-position: center;
 	background-size: 33%;
-	background-clip: content-box;
 
 
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
