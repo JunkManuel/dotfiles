@@ -14,5 +14,4 @@
 
 # pidof dunst && killall dunst
 
-dunst -print					\
-	  --startup_notification
+dunst -print
