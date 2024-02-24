@@ -19,10 +19,10 @@
     alternate-urgent-background: {color6};
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: linear-gradient(45deg,{color13},{color11},{color9});
+    selected-active-background: linear-gradient(45deg,{color5},{color3},{color1});
     selected-active-foreground: @foreground;
 	selected-active-border-color: {color12};
-    selected-normal-background: linear-gradient(45deg,{color13},{color11},{color9});
+    selected-normal-background: linear-gradient(45deg,{color5},{color3},{color1});
     selected-normal-foreground: @foreground;
     selected-urgent-background: linear-gradient(45deg,{color14},{color15},{color14});
     selected-urgent-foreground: @foreground;
