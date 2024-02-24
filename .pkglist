@@ -13,6 +13,7 @@ cups
 ddcci-driver-linux-dkms
 ddcutil
 devtools
+distro-grub-themes-arch
 dkms
 docker
 docker-compose
@@ -31,6 +32,8 @@ go
 grc
 greetd
 greetd-tuigreet
+grub
+grub-customizer
 gutenprint
 headsetcontrol
 htop
@@ -70,6 +73,7 @@ nvidia-dkms
 nwg-look-bin
 openrgb-bin
 openssh
+os-prober
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -204,6 +208,7 @@ xdg-desktop-portal
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xorg-xeyes
+xorg-xhost
 yay
 ydotool
 zip
