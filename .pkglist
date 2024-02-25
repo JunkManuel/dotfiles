@@ -6,6 +6,7 @@ aurutils
 base
 base-devel
 brightnessctl
+cmake
 colord
 colorz
 coreutils
@@ -25,6 +26,8 @@ f3
 foomatic-db-gutenprint-ppds
 fzf
 gamemode
+gamescope-nvidia
+gamescope-nvidia-debug
 ghostscript
 git
 glmark2
@@ -57,6 +60,7 @@ lua-language-server
 lxqt-policykit
 man-db
 man-pages
+mesa-utils
 mkinitcpio-firmware
 mkinitcpio-numlock
 moka-icon-theme-git
@@ -194,6 +198,7 @@ ttf-victor-mono-nerd
 unzip
 vim-language-server
 vlc
+vulkan-tools
 waybar
 webcord-bin
 webkitgtk-6.0
