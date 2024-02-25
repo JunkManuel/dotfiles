@@ -150,4 +150,5 @@ configuration {
   }
 }
 //@theme "/usr/share/rofi/themes/docu.rasi"
-@theme "/home/kiramanolo/.config/rofi/themes/launchpad.rasi"
+//@theme "/home/kiramanolo/.config/rofi/themes/launchpad.rasi"
+@theme "/home/kiramanolo/.config/rofi/themes/nova-dark.rasi"
