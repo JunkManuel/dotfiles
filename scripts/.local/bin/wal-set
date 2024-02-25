@@ -1,18 +1,26 @@
 #!/usr/bin/env sh
 WALLPAPERS_DIR=~/wallpapers
+WAL_FLAGS="--saturate 0.85 --backend colorz --cols16 -nteq"
+SWWW_PARAMS="--transition-fps 60 --transition-type "random" --transition-duration 2"
 
-wal_opts () {
-  wal --saturate 0.85 --backend colorz --cols16 -nteq $@
-}
+export WAL_FLAGS
 
+# Generate colorscheme
 if [ $# != 0 ]; then
-  wal_opts -i "$1"
+  wal $WAL_FLAGS -i $1
 else
-  wal_opts -i "$WALLPAPERS_DIR/default.png"
+  wal $WAL_FLAGS -i "$WALLPAPERS_DIR/default.png"
 fi 
 
+# Execute waybar daemon
 ~/.local/bin/bar
 
+# Update wallpaper for rofi configs
+rm ~/.config/rofi/.current_wallpaper && \
+		ln -rs $(/usr/bin/cat ~/.cache/wal/wal) ~/.config/rofi/.current_wallpaper
+
+# Restart dunst daemon
 systemctl --user restart dunst
 
-/usr/bin/swww img $(cat $HOME/.cache/wal/wal)
+# Set image as background
+/usr/bin/swww img $(cat $HOME/.cache/wal/wal) $SWW_PARAMS

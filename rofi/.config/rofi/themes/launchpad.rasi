@@ -57,7 +57,8 @@ element selected.active {
 }
 /*}}}*/
 element-text {
-    background-color: transparent;
+    background-color: #000000b0;
+	border-radius:	  8px;
     cursor:           inherit;
     highlight:        inherit;
     text-color:       inherit;
