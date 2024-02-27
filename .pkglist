@@ -26,7 +26,7 @@ f3
 foomatic-db-gutenprint-ppds
 fzf
 gamemode
-gamescope-nvidia
+gamescope
 ghostscript
 git
 glmark2
@@ -51,7 +51,6 @@ lib32-opencl-nvidia
 lib32-pipewire
 libnma-gtk4
 librewolf-bin
-librewolf-bin-debug
 libva
 linux-firmware
 linux-zen
@@ -207,6 +206,7 @@ wget
 wireplumber
 wl-clipboard
 wlogout
+wlogout-debug
 wofi
 xarchiver
 xdg-desktop-portal
