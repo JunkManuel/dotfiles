@@ -28,6 +28,7 @@ fzf
 gamemode
 gamescope
 ghostscript
+gimp
 git
 glmark2
 go
@@ -206,7 +207,6 @@ wget
 wireplumber
 wl-clipboard
 wlogout
-wlogout-debug
 wofi
 xarchiver
 xdg-desktop-portal
