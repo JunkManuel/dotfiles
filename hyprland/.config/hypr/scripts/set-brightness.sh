@@ -15,4 +15,4 @@ brightness="$(ddcutil --bus 5 getvcp 10 | tr -d " " | cut -d "=" -f 2 | cut -d "
 # 		dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag -h int:value:"100" "Volume: 100%"
 # fi
 
-dunstify -a "setbrightness" -u low -i display-brightness-symbolic -h string:x-dunst-stack-tag:$msgTag -h int:value:"$brightness" "Volume: ${brightness}%"
+dunstify -a "setbrightness" -u low -i display-brightness-symbolic -h string:x-dunst-stack-tag:$msgTag -h int:value:"$brightness" "Brightness: ${brightness}%"

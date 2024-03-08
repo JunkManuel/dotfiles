@@ -6,10 +6,14 @@ aurutils
 base
 base-devel
 brightnessctl
+btop
+chaotic-keyring
+chaotic-mirrorlist
 cmake
 colord
 colorz
 coreutils
+cpio
 cups
 ddcci-driver-linux-dkms
 ddcutil
@@ -40,7 +44,7 @@ grub-customizer
 gutenprint
 headsetcontrol
 htop
-hyprland
+hyprland-git
 hyprlang
 imagemagick
 inkscape
@@ -137,6 +141,8 @@ reflector
 rofi-lbonn-wayland-only-git
 sdbus-cpp
 skanpage
+spicetify-cli
+spicetify-marketplace-bin
 spotify-adblock
 steam
 stow

@@ -8,12 +8,16 @@
 @import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
 @import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
 @import url('https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap')
 
 :root {
-  --background-image: url('https://cdn.discordapp.com/attachments/898573605468770337/1193307028320440339/wallhaven-hatsune-malita.png');
+  // --background-image: url("https://i.imgur.com/kYW2H5C.jpg")
+  // --background-image: url('https://cdn.discordapp.com/attachments/898573605468770337/1193307028320440339/wallhaven-hatsune-malita.png');
 
+  --background-image: url("https://i.imgur.com/wRoFYNd.png");
+  --background-image-blur: 3px;
   --background-image-size: cover;
-  --background-image-position: center center;
+  --background-image-position: center;
 
   --popout-modal-image: var(--background-image);
   --popout-modal-blur: 1px;
@@ -37,18 +41,20 @@
   --tint-colour: 255,51,159;
   --tint-brightness: 0;
 
-  --window-padding: 5px;
-  --window-roundness: 20px;
+  --window-padding: 3px;
+  --window-roundness: 10px;
   --scrollbar-colour: rgb(126, 0, 189);
   --link-colour: #9500ff;
 
-  --font: 'Arial';
+  --font: 'Anta';
 
   --update-notice-1: none;
 
 
   --HSL-server-icon-size: 42px;
   --HSL-server-spacing: 15px;
+  --HSL-server-direction: column; /* Direction of the server list. | OPTIONS: column, column-reverse | DEFAULT: column */
+  --HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
 
 
   --rs-small-spacing: 1px;
