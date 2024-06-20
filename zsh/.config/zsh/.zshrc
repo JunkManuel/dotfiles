@@ -8,19 +8,24 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 #
 # Ma lines
-# Sources
+# -----------------------------------------------Sources--------------------------------------------
 #
 source ~/.config/zsh/keybinds.zshrc
+# 
+# -----------------------------------------------ALIASES--------------------------------------------
+#
+alias tree="eza --tree --icons"
+alias cat="bat --style=plain --paging=never"
 #
 # ls aliases
 #
-alias ls="ls --color=always"
-alias la="ls --color=always -la"
-alias ll="ls --color=always -l"
+alias ls="eza --icons"
+alias la="ls -la"
+alias ll="ls -l"
 #
 # diff-patch alias for unified fileformat
 #
-alias udiff="diff -Naur"
+alias udiff="diff -Naur --color"
 alias upatch="patch -uNp1"
 #
 # ssh aliases
@@ -35,6 +40,8 @@ fi
 #
 alias icat="kitty icat"
 #
+# ----------------------------------------------PROMPT-THEMING--------------------------------------
+#
 # Load promp theming module
 #
 autoload -Uz promptinit && promptinit
@@ -47,7 +54,7 @@ autoload -Uz vcs_info
 precmd () { vcs_info }
 zstyle ':vcs_info:*' formats ' %s(%b)' # git(main)
 #
-# Load completitions module
+# ----------------------------------------------COMPITNIT-------------------------------------------
 #
 autoload -Uz compinit
 compinit -d ~/.cache/zsh/zcompdump
