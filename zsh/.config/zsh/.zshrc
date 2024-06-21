@@ -30,7 +30,7 @@ alias upatch="patch -uNp1"
 #
 # ssh aliases
 #
-alias ssh="env TERM=xterm-256color ssh"
+# alias ssh="env TERM=xterm-256color ssh"
 if command -v kitten >&/dev/null && [ "$TERM" = "xterm-kitty" ]
 then
 	alias ssh="kitten ssh"
@@ -62,6 +62,7 @@ compinit -d ~/.cache/zsh/zcompdump
 zstyle ':completion:*' menu select # enable menu driven interface
 zstyle ':completion::complete:*' gain-privileges 1 # enable sudo completitions
 #
-# Syntax highlighting
+# -----------------------------------------------Fish-like-SYNTAX-----------------------------------
 #
-[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
