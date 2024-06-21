@@ -66,3 +66,7 @@ zstyle ':completion::complete:*' gain-privileges 1 # enable sudo completitions
 #
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#
+# -----------------------------------------------FIXES----------------------------------------------
+#
+stty icrnl # Enter inputs ^M instead of newline on ssh
