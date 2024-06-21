@@ -4,9 +4,9 @@
 msgTag="mybrightness"
 
 # brightnessctl s "$@"%
-ddcutil --disable-dynamic-sleep --noverify --bus 5 setvcp 10 "$@"
+xbacklight "$@"
 
-brightness="$(ddcutil --bus 5 getvcp 10 | tr -d " " | cut -d "=" -f 2 | cut -d "," -f 1)"
+brightness="$(xbacklight -get)"
 # volumei="$(wpctl get-volume @DEFAULT_SINK@ | cut -d " " -f 2 | cut -d "." -f 1)"
 
 # if [ "$volumei" -eq 0 ]; then
