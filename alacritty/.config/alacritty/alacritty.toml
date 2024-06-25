@@ -5,5 +5,5 @@ dynamic_padding = true
 
 [font]
 normal = { family = "JetBrainsMono Nerdfont", style = "Regular"}
-size = 14.0
+size = 11.0
 # offset = { x = 12, y = 12 }

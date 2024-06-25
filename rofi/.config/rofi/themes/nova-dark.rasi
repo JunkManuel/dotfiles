@@ -6,17 +6,17 @@ configuration {
 	modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
 /*    display-calc:               "Calc";	*/
-    display-drun:               "Apps";
-    display-run:                "Run";
-    display-filebrowser:        "Files";
-    display-window:             "Windows";
+/*    display-drun:               "Apps";   */
+/*    display-run:                "Run";    */
+/*    display-filebrowser:        "Files";  */
+/*    display-window:             "Windows";*/
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
-    font:                        "JetBrains Mono Nerd Font 10";
+/*    font:                        "JetBrains Mono Nerd Font 10";   */
 }
 
 /* ---- Load pywal colors ---- */
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
+@theme "~/.cache/wallust/colors-rofi.rasi"
 
 /* ---- Global Properties ---- */
 * {
@@ -67,7 +67,7 @@ inputbar {
     border-radius:               25px;
     orientation:                 horizontal;
     children:                    ["entry", "dummy", "mode-switcher" ];
-    background-image:            url("~/.config/rofi/.current_wallpaper", width);
+    background-image:            @wallpaper;
 }
 
 /* ---- Entry input ---- */
