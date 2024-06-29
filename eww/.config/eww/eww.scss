@@ -7,6 +7,7 @@
   background-color: #3a3a3a;
   color: #b0b4bc;
   padding: 10px;
+  font-family: JetBrainsMono Nerd Font
 }
 
 // Styles on classes (see eww.yuck for more information)
@@ -49,7 +50,25 @@
 .label-ram {
   font-size: large;
 }
-.workspaces button:hover {
-  color: #D35D6E;
+
+/* .0 , .01, .02, .03, .04, .05, .06, .07, .08, .09 */
+/* .011, .022, .033, .044, .055, .066, .077, .088, .099{ */
+/*   margin: 0px 0px 0px 0px; */
+/* } */
+
+/* Unoccupied */
+._0 {
+	color: #606060;
 }
 
+/* Occupied */
+._01, ._02, ._03, ._04, ._05, ._06, ._07, ._08, ._09 {
+	color:#959595;
+}
+
+
+/* Focused */
+._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099{
+	color: #000000;
+	font-weight:bold;
+}
