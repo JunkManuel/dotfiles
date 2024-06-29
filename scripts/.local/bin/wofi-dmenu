@@ -1,2 +1,0 @@
-#!/bin/sh
-wofi --color=$HOME/.cache/wal/colors --show dmenu

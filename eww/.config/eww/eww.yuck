@@ -19,13 +19,15 @@
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
-    (metric :label "1󰁹"
+    (metric :label "󰁹"
             :value battery1
             :onchange "")
     (metric :label "󰍛"
             :value {EWW_RAM.used_mem_perc}
             :onchange "")
-    time))
+    (label  :text time
+            :class "time")
+		))
 
 (defwidget workspaces []
 (literal :content workspace))
@@ -52,7 +54,7 @@
 ;; DEFWINDOW
 (defwindow bar
   :monitor 0
-  :stacking "overlay"
+  :stacking "fg"
   :exclusive true
   :focusable false
   :namespace "eww-bar"

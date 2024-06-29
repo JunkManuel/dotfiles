@@ -138,3 +138,8 @@ target = '~/.cache/wallust/colors-hyprland.conf'
 [[entry]]
 template = 'templates/dunstrc'
 target = '~/.config/dunst/dunstrc.d/20-wallust-colors.conf'
+
+# eww
+[[entry]]
+template = 'templates/eww.scss'
+target = '~/.config/eww/_wallust.scss'

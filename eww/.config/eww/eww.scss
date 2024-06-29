@@ -2,10 +2,31 @@
   all: unset; //Unsets everything so you can style everything from scratch
 }
 
+/* $bg: #1D0E0D; */
+/* $fg: #E9E7E6; */
+/* $color0: #290F0E;  */
+/* $color1: #E67B70; */
+/* $color2: #E36F63; */
+/* $color3: #DAA22B; */
+/* $color4: #CC9324; */
+/* $color5: #CC3F24; */
+/* $color6: #D43125; */
+/* $color7: #6A6564; */
+/* $color8: #1C0A09; */
+/* $color9: #F7D9D4; */
+/* $color10: #F4C2BE;  */
+/* $color11: #E7C479; */
+/* $color12: #D49725; */
+/* $color13: #D43625; */
+/* $color14: #D92C26; */
+/* $color15: #232121; */
+
+@import "_wallust";
+
 //Global Styles
 .bar {
-  background-color: #3a3a3a;
-  color: #b0b4bc;
+  background-color: $color15;
+  color: $fg;
   padding: 5px;
   font-family: JetBrainsMono Nerd Font;
   border-radius: 0px 0px 5px 5px
@@ -13,43 +34,32 @@
 
 // Styles on classes (see eww.yuck for more information)
 
+
 .sidestuff slider {
   all: unset;
-  color: #ffd5cd;
+  color: $fg;
 }
 
 .metric scale trough highlight {
   all: unset;
-  background-color: #D35D6E;
-  color: #000000;
+  background-color: $color2;
+  /* color: $bg; */
   border-radius: 10px;
 }
 .metric scale trough {
   all: unset;
-  background-color: #4e4e4e;
+  background-color: $bg;
   border-radius: 50px;
   min-height: 3px;
   min-width: 50px;
   margin-left: 10px;
   margin-right: 20px;
 }
-.metric scale trough highlight {
+
+.time {
   all: unset;
-  background-color: #D35D6E;
-  color: #000000;
-  border-radius: 10px;
-}
-.metric scale trough {
-  all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-.label-ram {
-  font-size: large;
+  background-color: $color15;
+  color: $color2;
 }
 
 /* All workspaces possible status*/
@@ -60,17 +70,17 @@
 
 /* Unoccupied */
 ._0 {
-	color: #606060;
+	color: $color7;
 }
 
 /* Occupied */
 ._01, ._02, ._03, ._04, ._05, ._06, ._07, ._08, ._09 {
-	color:#959595;
+	color:$color10;
 }
 
 
 /* Focused */
 ._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099{
-	color: #000000;
+	color: $color2;
 	font-weight:bold;
 }
