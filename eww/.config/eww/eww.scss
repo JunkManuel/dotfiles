@@ -46,6 +46,7 @@
   /* color: $bg; */
   border-radius: 10px;
 }
+
 .metric scale trough {
   all: unset;
   background-color: $bg;
@@ -53,13 +54,33 @@
   min-height: 3px;
   min-width: 50px;
   margin-left: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+.battery {
+  all: unset;
+  background-color: $color15;
+  color: $color2;
+  /* border-radius: 5px; */
+  min-height: 3px;
+  min-width: 50px;
+}
+
+.battery-label {
+  all: unset;
+  color: $color2;
+  background-color: $color15;
+  /* margin-left: 10px; */
+  /* margin-right: 1px; */
+  font-size: 10px;
+  margin: 6px 11px 6px 6px;
 }
 
 .time {
   all: unset;
   background-color: $color15;
   color: $color2;
+  margin-left: 10px;
 }
 
 /* All workspaces possible status*/

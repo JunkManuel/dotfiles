@@ -1,6 +1,6 @@
 ;; DEFLISTENS
 (deflisten music :initial ""
-  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || mpc -f %title% current")
 
 (deflisten workspace "scripts/workspace")
 
@@ -18,13 +18,20 @@
     (sidestuff)))
 
 (defwidget sidestuff []
-  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
-    (metric :label "󰁹"
-            :value battery1
-            :onchange "")
-    (metric :label "󰍛"
-            :value {EWW_RAM.used_mem_perc}
-            :onchange "")
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end" :valign "center"
+    ;; (metric :label "󰁹"
+    ;;         :value battery1
+    ;;         :onchange "")
+    ;; (metric :label "󰍛"
+    ;;         :value {EWW_RAM.used_mem_perc}
+    ;;         :onchange "")
+	(circular-progress 
+				:value battery1
+				:class "battery"
+				:thickness 4
+				:start-at 75
+				(label	:text ""
+						:class "battery-label"))
     (label  :text time
             :class "time")
 		))
