@@ -1,51 +1,20 @@
 ;; DEFLISTENS
-(deflisten music :initial ""
-  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || mpc -f %title% current")
+;; (deflisten music :initial ""
+;;   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || mpc -f %title% current")
+
+(defpoll music :interval "1s"
+  "mpc -f %title% current")
 
 (deflisten workspace "scripts/workspace")
 
-(defpoll time :interval "10s"
-  "date '+%H:%M %b %d, %Y'")
+(defpoll time :interval "200ms"
+  ;; "date '+%H:%M %b %d, %Y'")
+  "date '+%H:%M:%S'")
 
 (defpoll battery1 :interval "30s"
   "cat /sys/class/power_supply/BAT1/capacity")
 
 ;; DEFWIDGETS
-(defwidget bar []
-  (centerbox :orientation "h"
-    (workspaces)
-    (music)
-    (sidestuff)))
-
-(defwidget sidestuff []
-  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end" :valign "center"
-    ;; (metric :label "󰁹"
-    ;;         :value battery1
-    ;;         :onchange "")
-    ;; (metric :label "󰍛"
-    ;;         :value {EWW_RAM.used_mem_perc}
-    ;;         :onchange "")
-	(circular-progress 
-				:value battery1
-				:class "battery"
-				:thickness 4
-				:start-at 75
-				(label	:text ""
-						:class "battery-label"))
-    (label  :text time
-            :class "time")
-		))
-
-(defwidget workspaces []
-(literal :content workspace))
-
-(defwidget music []
-  (box :class "music"
-       :orientation "h"
-       :space-evenly false
-       :halign "center"
-    {music != "" ? "🎵${music}" : ""}))
-
 
 (defwidget metric [label value onchange]
   (box :orientation "h"
@@ -57,6 +26,46 @@
            :active {onchange != ""}
            :value value
            :onchange onchange)))
+
+(defwidget bat_module []
+(box :spacing 1 :orientation "h" :space-envenly false :halign "end" :valign "center"
+	(circular-progress 
+		    :value {EWW_BATTERY.BAT1.capacity}
+            :class "battery"
+		    :thickness 3
+		    :start-at 75
+		    (label	:text ""
+				    :class "battery-icon"))
+    (label  :text "${EWW_BATTERY.BAT1.capacity}%"
+		    :class "battery-label"))) 
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end" :valign "center"
+    ;; (metric :label "󰁹"
+    ;;         :value battery1
+    ;;         :onchange "")
+    ;; (metric :label "󰍛"
+    ;;         :value {EWW_RAM.used_mem_perc}
+    ;;	       :onchange "")
+	(bat_module)
+   (label  :text time
+           :class "time")))
+
+(defwidget workspaces []
+(literal :content workspace))
+
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    {music != "" ? "🎵${music}" : ""}))
+
+(defwidget bar []
+  (centerbox :orientation "h"
+    (workspaces)
+    (music)
+    (sidestuff)))
 
 ;; DEFWINDOW
 (defwindow bar

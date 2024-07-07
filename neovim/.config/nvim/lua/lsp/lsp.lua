@@ -2,17 +2,21 @@
 -- Setup lsp
 --------------------------
 local lspconfig = require('lspconfig')
-require("lsp-ui")
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -------------------------
 -- Python language server
 -------------------------
-lspconfig.jedi_language_server.setup {}
+lspconfig.jedi_language_server.setup {
+    capabilities = capabilities
+}
 
 -------------------------
 -- Lua language server
 -------------------------
+-- lspconfig.sumneko_lua.setup {}
 lspconfig.lua_ls.setup {
+   capabilities = capabilities,
    on_init = function(client)
      local path = client.workspace_folders[1].name
      if not vim.loop.fs_stat(path..'/.luarc.json') and not vim.loop.fs_stat(path..'/.luarc.jsonc') then
@@ -46,14 +50,19 @@ lspconfig.lua_ls.setup {
 -------------------------
 -- VimScript language server
 -------------------------
-lspconfig.vimls.setup {}
+lspconfig.vimls.setup {
+    capabilities = capabilities
+}
 
 -------------------------
 -- dockerfiles language server
 -------------------------
-lspconfig.dockerls.setup {}
+lspconfig.dockerls.setup {
+    capabilities = capabilities
+}
 lspconfig.docker_compose_language_service.setup {
 	filetypes = { "yaml.docker-compose" },
+    capabilities = capabilities
 }
 
 -- Enable docker compose lsp with filename
@@ -70,8 +79,17 @@ end
 
 vim.cmd[[au BufRead * lua docker_fix()]]
 
+-------------------------
+-- Nix language server
+-------------------------
+-- lspconfig.nixd.setup {}
+-- lspconfig.rnix.setup{
+--     capabilities = capabilities
+-- }
+lspconfig.nil_ls.setup{
+    capabilities = capabilities
+}
 
 -------------------------
 -- END lsp 
 -------------------------
-require("lsp-keybindings")

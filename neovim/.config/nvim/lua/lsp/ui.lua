@@ -74,11 +74,11 @@ end
 -- Diagnostics display
 --------------------------
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = true,
   underline = true,
   update_in_insert = true,
-  severity_sort = false,
+  severity_sort = true,
 })
 
 
