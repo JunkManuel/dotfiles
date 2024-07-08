@@ -5,11 +5,11 @@ require('plug/kanagawa')
 require('plug/commenter')
 require('plug/colorizer')
 require('plug/cmp')
+require('plug/lualine')
 
 require('lsp/lsp')
 require('lsp/ui')
 require('lsp/keybindings')
 
-require('lualine').setup()
 require('telescope').setup()
 require('ibl').setup()

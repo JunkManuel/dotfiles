@@ -2,6 +2,7 @@
 
 [window]
 dynamic_padding = true
+opacity = 0.85
 
 [font]
 normal = { family = "JetBrainsMono Nerdfont", style = "Regular"}
