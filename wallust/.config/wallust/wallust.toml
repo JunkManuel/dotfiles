@@ -58,7 +58,7 @@ threshold = 30
 #  * softlight16     - softlight with color variation
 #  * softlightcomp   - softlight with complementary colors
 #  * softlightcomp16 - softlight with complementary colors with colors
-filter = "softdark16"
+palette = "softdark16"
 
 # This field chooses a method to use when the gathered colors aren't enough:
 #  * interpolation - (default) Tries to pick two colors and built gradients over them
@@ -114,32 +114,42 @@ alpha = 90
 #
 # Where `var` can be colors from `color0` to `color15`, `background`, `foreground` and `cursor`.
 
-[[entry]]
-template = 'templates/rofi.rasi'
-target = '~/.cache/wallust/colors-rofi.rasi'
-new_engine = true
-
-# # foot
-# foot.src = 'templates/foot.ini'
-# foot.dst = '~/.config/foot/foot.ini'
-# foot.new_engine = true
+[templates]
+# [[entry]]
+# template = 'templates/rofi.rasi'
+# target = '~/.cache/wallust/colors-rofi.rasi'
+# new_engine = true
+rofi.src = 'templates/rofi.rasi'
+rofi.dst = '~/.cache/wallust/colors-rofi.rasi'
+rofi.new_engine = true
 
 # alacritty
-[[entry]]
-template = 'templates/alacritty.toml'
-target = '~/.cache/wallust/colors-alacritty.toml'
+# [[entry]]
+# template = 'templates/alacritty.toml'
+# target = '~/.cache/wallust/colors-alacritty.toml'
+alacritty.src = 'templates/alacritty.toml'
+alacritty.dst = '~/.cache/wallust/colors-alacritty.toml'
 
 # hypr
-[[entry]]
-template = 'templates/hyprland.conf'
-target = '~/.cache/wallust/colors-hyprland.conf'
+# [[entry]]
+# template = 'templates/hyprland.conf'
+# target = '~/.cache/wallust/colors-hyprland.conf'
+hypr.src = 'templates/hyprland.conf'
+hypr.dst = '~/.cache/wallust/colors-hyprland.conf'
+
+hyprpaper.src = 'templates/hyprpaper.conf'
+hyprpaper.dst = '~/.config/hypr/hyprpaper.conf'
 
 # dunst
-[[entry]]
-template = 'templates/dunstrc'
-target = '~/.config/dunst/dunstrc.d/20-wallust-colors.conf'
+# [[entry]]
+# template = 'templates/dunstrc'
+# target = '~/.config/dunst/dunstrc.d/20-wallust-colors.conf'
+dunst.src = 'templates/dunstrc'
+dunst.dst = '~/.config/dunst/dunstrc.d/20-wallust-colors.conf'
 
 # eww
-[[entry]]
-template = 'templates/eww.scss'
-target = '~/.config/eww/_wallust.scss'
+# [[entry]]
+# template = 'templates/eww.scss'
+# target = '~/.config/eww/_wallust.scss'
+eww.src = 'templates/eww.scss'
+eww.dst = '~/.config/eww/_wallust.scss'

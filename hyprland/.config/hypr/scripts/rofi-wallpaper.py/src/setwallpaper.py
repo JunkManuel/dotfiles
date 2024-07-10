@@ -6,7 +6,7 @@ log = logging.getLogger(__name__)
 def setwallpaper(wallpaper:str, display:str= "eDP-1"):
     args_preload = ["hyprctl", "hyprpaper", "preload", wallpaper]
     args_wallpaper = ["hyprctl", "hyprpaper", "wallpaper", f"{display},{wallpaper}"]
-    args_wallust = ["wallust","-s", wallpaper]
+    args_wallust = ["wallust","run", wallpaper, "-s"]
     
     __run(args_preload)
     __run(args_wallpaper)
