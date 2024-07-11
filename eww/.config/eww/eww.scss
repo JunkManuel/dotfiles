@@ -37,32 +37,15 @@
 
 .sidestuff, .works, .music {
   all: unset;
-  background-color: $color0;
+  background-color: $bg;
   padding: 7px;
   border-radius: 20px;
-}
-
-.metric scale trough highlight {
-  all: unset;
-  background-color: $color2;
-  /* color: $bg; */
-  border-radius: 10px;
-}
-
-.metric scale trough {
-  all: unset;
-  background-color: $bg;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .battery {
   all: unset;
   /* background-color: $color0; */
-  color: $color3;
+  color: $color6;
   /* border-radius: 5px; */
   /* min-height: 3px; */
   /* min-width: 50px; */
@@ -70,7 +53,7 @@
 
 .battery-icon {
   all: unset;
-  color: $color2;
+  color: $color1;
   /* background-color: $color0; */
   /* margin-left: 10px; */
   /* margin-right: 1px; */
@@ -80,7 +63,7 @@
 
 .battery-label {
   all: unset;
-  color: $color2;
+  color: $color1;
   /* background-color: $color0; */
   font-size: 10px;
   margin: 0px;
@@ -89,8 +72,9 @@
 .time {
   all: unset;
   /* background-color: $color15; */
-  color: $color2;
+  color: $color1;
   margin-left: 10px;
+  font-style: oblique;
 }
 
 /* All workspaces possible status*/
@@ -101,17 +85,18 @@
 
 /* Unoccupied */
 ._0 {
-	color: $color7;
+  color: $color7;
 }
 
 /* Occupied */
-._01, ._02, ._03, ._04, ._05, ._06, ._07, ._08, ._09 {
-	color:$color10;
+._01, ._02, ._03, ._04, ._05, ._06, ._07, ._08, ._09 {  
+  color:$color9;
 }
 
 
 /* Focused */
 ._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099{
-	color: $color2;
-	font-weight:bold;
+  color: $color1;
+  font-weight:900;
+  font-style:oblique;
 }

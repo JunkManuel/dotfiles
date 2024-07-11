@@ -22,7 +22,7 @@ backend = "full"
 #  * labfast  - Variant of lab that avoids floating arithmetic thus faster operations but
 #                not that much precise result Images that work on lab labmixed could not
 #                have enough colors for labfast
-color_space = "labmixed"
+color_space = "labfast"
 
 # Difference between similar colors, used by the colorspace:
 #  1          Not perceptible by human eyes.
@@ -30,7 +30,7 @@ color_space = "labmixed"
 #  2 - 10     Perceptible at a glance.
 #  11 - 49    Colors are more similar than opposite
 #  100        Colors are exact opposite
-threshold = 30
+threshold = 10
 
 # NOTE: All palettes will fill 16 colors (from color0 to color15), 16 color
 #       variations are the 'ilusion' of more colors by opaquing color1 to color5.
@@ -58,7 +58,7 @@ threshold = 30
 #  * softlight16     - softlight with color variation
 #  * softlightcomp   - softlight with complementary colors
 #  * softlightcomp16 - softlight with complementary colors with colors
-palette = "softdark16"
+palette = "dark16"
 
 # This field chooses a method to use when the gathered colors aren't enough:
 #  * interpolation - (default) Tries to pick two colors and built gradients over them
@@ -68,7 +68,7 @@ palette = "softdark16"
 # Ensures a "readable contrast" (OPTIONAL, disabled by default)
 # Should only be enabled when you notice an unreadable contrast frequently happening
 # with your images. The reference color for the contrast is the background color.
-check_contrast = true
+# check_contrast = true
 
 # Color saturation, between [1% and 100%] (OPTIONAL, disabled by default)
 # usually something higher than 50 increases the saturation and below
@@ -76,7 +76,7 @@ check_contrast = true
 saturation = 70
 
 # Alpha value for templating, by default 100 (no other use whatsoever)
-alpha = 90
+alpha = 95
 
 # -- templating -- # (OPTIONAL)
 # An `entry` requires two files:
