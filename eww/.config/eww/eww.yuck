@@ -1,24 +1,31 @@
 ;; DEFLISTENS
-;; (deflisten music :initial ""
-;;   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || mpc -f %title% current")
-
-(defpoll music :interval "1s"
-    "mpc -f %title% current")
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || echo ''")
 
 (deflisten workspace "scripts/workspace")
 
+(defpoll wifi-icon :interval "1s" "scripts/wifi icon")
+(defpoll wifi-name :interval "1s" "scripts/wifi name")
+
 (defpoll full_time :interval "200ms"
     "date '+%d/%m/%Y'")
-
 (defpoll smol_time :interval "200ms"
     "date '+%H:%M:%S'")
-
 (defvar expand_time false)
 
 ;; DEFWIDGETS
 
+(defwidget wifi_module []
+(box :orientation "h" :tooltip wifi-name :halign "end" :valign "center" :width 17
+	(button	
+        ;; :timeout 10000
+        :onclick "foot -e nmtui &"
+		:class "wifi-icon" 
+        "${wifi-icon}")
+))
+
 (defwidget bat_module []
-(box :class "battery" :spacing 0 :orientation "h" :space-envenly false :halign "end" :valign "center"
+(box :class "battery" :spacing 1 :orientation "h" :space-evenly false :halign "end" :valign "center"
 	(circular-progress 
 		:value {EWW_BATTERY.BAT1.capacity}
 		:thickness 3
@@ -51,7 +58,8 @@
 
 
 (defwidget sidestuff []
-(box :class "sidestuff" :orientation "h" :space-evenly false :halign "end" :valign "center"
+(box :class "sidestuff" :spacing 15 :orientation "h" :space-evenly false :halign "end" :valign "center"
+    (wifi_module)
 	(bat_module)
     (time_module)
 ))

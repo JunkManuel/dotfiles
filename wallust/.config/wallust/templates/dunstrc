@@ -1,16 +1,21 @@
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
 [urgency_low]
-    background = "{color8}b0"
-    foreground = "{foreground}"
-	frame_color = "{color9}"
+    background = "{background}80"
+    foreground = "{color2}"
+	frame_color = "{color10}"
+    highlight = "{color6}"
 
 [urgency_normal]
-    background = "{background}b0"
+    background = "{background}"
     foreground = "{foreground}"
-	frame_color = "{color12}"
+	frame_color = "{color8}"
+    highlight = "{color6}"
 
 [urgency_critical]
-    background = "{color13}"
+    background = "{color1}"
     foreground = "{foreground}"
     frame_color = "{color0}"
+    highlight = "{color6}"
+    # icon = 
+

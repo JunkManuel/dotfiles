@@ -1,0 +1,18 @@
+#!/bin/sh
+
+symbol() {
+    [ $(cat /sys/class/net/w*/operstate) = down ] && echo 󰤭 && exit
+    local signal=$(nmcli -f IN-USE,SSID,SIGNAL device wifi | grep '*' | sed "s/  */ /g" | cut -f 3 -d " ")
+    [ "$signal" -gt 74 ] && echo 󰤨 && exit
+    [ "$signal" -gt 49 ] && echo 󰤥 && exit
+    [ "$signal" -gt 24 ] && echo 󰤢 && exit
+    [ "$signal" -gt 0 ] && echo 󰤟 && exit 
+    echo 󰤨
+}
+
+name() {
+    nmcli | grep "^wlp" | sed 's/\ conectado\ to\ /Conectado a /g' | cut -d ':' -f2
+}
+
+[ "$1" = "icon" ] && symbol && exit
+[ "$1" = "name" ] && name && exit

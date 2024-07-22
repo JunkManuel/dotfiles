@@ -32,8 +32,8 @@ elif [[ ${1:0:18} == "destroyworkspacev2" ]]; then #unset unoccupied workspace
 fi
 
 #output eww widget
-echo 	"(eventbox :onscroll \"echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace\" :halign \"start\" :valign \"center \" \
-          (box	:class \"works\"	:orientation \"h\" :spacing 5 :space-evenly \"false\" :halign \"start\" :valign \"center \" \
+echo 	"(eventbox :onscroll \"echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace\" :halign \"start\" :valign \"center\" \
+          (box	:class \"works\"	:orientation \"h\" :spacing 5 :space-evenly \"false\" :halign \"start\" :valign \"center\" \
               (button :onclick \"hyprctl dispatch workspace 1\" :class \"_0$o1$f1\" \"${ic[1]}\") \
               (button :onclick \"hyprctl dispatch workspace 2\" :class \"_0$o2$f2\" \"${ic[2]}\") \
               (button :onclick \"hyprctl dispatch workspace 3\" :class \"_0$o3$f3\" \"${ic[3]}\") \

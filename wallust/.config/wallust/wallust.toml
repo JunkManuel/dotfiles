@@ -130,6 +130,11 @@ rofi.new_engine = true
 alacritty.src = 'templates/alacritty.toml'
 alacritty.dst = '~/.cache/wallust/colors-alacritty.toml'
 
+#foot
+foot.src = 'templates/foot.ini'
+foot.dst = '~/.config/foot/foot.ini'
+foot.new_engine = true
+
 # hypr
 # [[entry]]
 # template = 'templates/hyprland.conf'
