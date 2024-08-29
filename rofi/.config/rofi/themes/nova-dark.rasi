@@ -29,6 +29,8 @@ configuration {
     text-selected:               @background;
     text-color:                  @foreground;
     border-color:                @selected;
+
+    placeholder-text:            "<span alpha=\"50%\">Type Here</span>";
 }
 
 /* ---- Window ---- */
@@ -80,8 +82,9 @@ entry {
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "  Search"; // << Search symbol
+    placeholder:                 @placeholder-text ;//"  Search" << Search symbol
     placeholder-color:           inherit;
+    placeholder-markup:          true;
 }
 
 /* ---- Listbox ---- */
@@ -97,7 +100,7 @@ listbox {
 listview {
     enabled:                     true;
     columns:                     2;
-    lines:                       8;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -211,7 +214,9 @@ message {
 textbox {
     padding:                     12px;
     border-radius:               10px;
-    background-color:            @background-alt;
+    border:                      3px;
+    background-color:            @background;
+    border-color:                @background-alt;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;
