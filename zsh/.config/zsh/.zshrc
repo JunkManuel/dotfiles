@@ -38,7 +38,33 @@ fi
 #
 # Kitty aliases
 #
-alias icat="kitty icat"
+# alias icat="kitty icat"
+#
+# Encripting aliases
+edir() {
+    if [ -d $1 ] 
+    then
+        local file_name=$1
+        local enc_file_name="$(echo $1 | rev | cut -f 1 -d "/" | rev)".tar.xz.gpg
+
+        tar -cf $file_name.tar.xz $file_name
+        gpg -er 098757B4112D03FC9319A6A804B25AD9EA9CFE26 -o $enc_file_name $file_name.tar.xz
+
+        rm $1.tar.xz 
+    else
+        echo "edir: $1 does not exist or is not a directory"
+    fi
+}
+ddir() {
+    if [ -f $1 ]
+    then 
+        local input_file_name=$1
+        local input_file_name_noformat=$(echo $1 | cut -f 1 -d ".")
+        gpg -d $input_file_name | tar -x
+    else
+        echo "ddir: $1 is not a file or does not exist"
+    fi
+}
 #
 # ----------------------------------------------DIRECTORY-ALIASES-----------------------------------
 #
