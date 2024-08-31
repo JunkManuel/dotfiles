@@ -40,6 +40,12 @@ fi
 #
 alias icat="kitty icat"
 #
+# ----------------------------------------------DIRECTORY-ALIASES-----------------------------------
+#
+hash -d proyects=~/docs/proyects
+hash -d database=~/syncthing/database
+hash -d config=~/dotes
+#
 # ----------------------------------------------PROMPT-THEMING--------------------------------------
 #
 # Load promp theming module
