@@ -22,7 +22,7 @@ backend = "full"
 #  * labfast  - Variant of lab that avoids floating arithmetic thus faster operations but
 #                not that much precise result Images that work on lab labmixed could not
 #                have enough colors for labfast
-color_space = "labfast"
+color_space = "lab"
 
 # Difference between similar colors, used by the colorspace:
 #  1          Not perceptible by human eyes.
@@ -119,42 +119,45 @@ alpha = 95
 # template = 'templates/rofi.rasi'
 # target = '~/.cache/wallust/colors-rofi.rasi'
 # new_engine = true
-rofi.src = 'templates/rofi.rasi'
+rofi.src = 'rofi.rasi'
 rofi.dst = '~/.cache/wallust/colors-rofi.rasi'
-rofi.new_engine = true
 
 # alacritty
 # [[entry]]
 # template = 'templates/alacritty.toml'
 # target = '~/.cache/wallust/colors-alacritty.toml'
-alacritty.src = 'templates/alacritty.toml'
+alacritty.src = 'alacritty.toml'
 alacritty.dst = '~/.cache/wallust/colors-alacritty.toml'
+alacritty.pywal = true
 
 #foot
-foot.src = 'templates/foot.ini'
+foot.src = 'foot.ini'
 foot.dst = '~/.config/foot/foot.ini'
-foot.new_engine = true
 
 # hypr
 # [[entry]]
 # template = 'templates/hyprland.conf'
 # target = '~/.cache/wallust/colors-hyprland.conf'
-hypr.src = 'templates/hyprland.conf'
+hypr.src = 'hyprland.conf'
 hypr.dst = '~/.cache/wallust/colors-hyprland.conf'
+hypr.pywal = true
 
-hyprpaper.src = 'templates/hyprpaper.conf'
+hyprpaper.src = 'hyprpaper.conf'
 hyprpaper.dst = '~/.config/hypr/hyprpaper.conf'
+hyprpaper.pywal = true
 
 # dunst
 # [[entry]]
 # template = 'templates/dunstrc'
 # target = '~/.config/dunst/dunstrc.d/20-wallust-colors.conf'
-dunst.src = 'templates/dunstrc'
+dunst.src = 'dunstrc'
 dunst.dst = '~/.config/dunst/dunstrc.d/20-wallust-colors.conf'
+dunst.pywal = true
 
 # eww
 # [[entry]]
 # template = 'templates/eww.scss'
 # target = '~/.config/eww/_wallust.scss'
-eww.src = 'templates/eww.scss'
+eww.src = 'eww.scss'
 eww.dst = '~/.config/eww/_wallust.scss'
+eww.pywal = true
