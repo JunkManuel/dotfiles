@@ -91,5 +91,5 @@
                       :y "0%"
                       :width "100%"
                       :height "5px"
-                      :anchor "top center")
+                      :anchor "bottom center")
   (bar))
