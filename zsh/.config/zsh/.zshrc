@@ -1,8 +1,8 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/zsh/histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt autocd extendedglob nomatch
+HISTSIZE=10000
+SAVEHIST=10000
+setopt autocd extendedglob nomatch share_history
 unsetopt beep notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
