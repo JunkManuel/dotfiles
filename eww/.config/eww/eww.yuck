@@ -7,6 +7,11 @@
 (defpoll wifi-icon :interval "1s" "scripts/wifi icon")
 (defpoll wifi-name :interval "1s" "scripts/wifi name")
 
+(defpoll battery-icon :interval "5s" "scripts/battery icon")
+(defpoll battery-percentage :interval "5s" "scripts/battery capacity")
+(defpoll battery-eta :interval "5s" "scripts/battery eta")
+
+
 (defpoll full_time :interval "200ms"
     "date '+%d/%m/%Y'")
 (defpoll smol_time :interval "200ms"
@@ -14,6 +19,13 @@
 (defvar expand_time false)
 
 ;; DEFWIDGETS
+(defwidget icon [name ?class]
+    (image
+        :class {"icon ${class}"}
+        :style "background-image: -gtk-icontheme('${name}');"
+    )
+)
+
 
 (defwidget wifi_module []
 (box :orientation "h" :tooltip wifi-name :halign "end" :valign "center" :width 17
@@ -25,19 +37,23 @@
 ))
 
 (defwidget bat_module []
-(box :class "battery" :spacing 1 :orientation "h" :space-evenly false :halign "end" :valign "center"
+(box :tooltip battery-eta :class "battery" :spacing 1 :orientation "h" :space-evenly false :halign "end" :valign "center"
 	(circular-progress 
-		:value {EWW_BATTERY.BAT1.capacity}
+		;; :value {EWW_BATTERY.BAT1.capacity}
+        :value "${battery-percentage}"
 		:thickness 3
 		:start-at 75
         :clockwise false
-		(label	
-            :text "${"${EWW_BATTERY.BAT1.status}" == "Discharging" ? "󰁹" : "󰂄"}"
-            ;; :text "no"
-			:class "battery-icon"))
+		;; (label	
+        ;;  :text "${"${EWW_BATTERY.BAT1.status}" == "Discharging" ? "󰁹" : "󰂄"}"
+        ;;  :text "no"
+		;;	:class "battery-icon")
+        (icon 
+            :name "${battery-icon}"
+            :class "battery-icon"))
     (label  
-        :text "${EWW_BATTERY.BAT1.capacity}%"
-        ;; :text {"${EWW_BATTERY.BAT1.status}" == "Discharging"}
+        ;; :text "${EWW_BATTERY.BAT1.capacity}%"
+        :text "${battery-percentage}%"
 		:class "battery-label"))) 
 
 (defwidget time_module []

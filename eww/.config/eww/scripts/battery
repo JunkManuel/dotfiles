@@ -1,0 +1,25 @@
+#!/bin/sh
+
+main () {
+    local DISPALYDEVICE=/org/freedesktop/UPower/devices/DisplayDevice
+    
+    symbol() {
+        # local icon_name=$(upower -i /org/freedesktop/UPower/devices/DisplayDevice | grep "icon-name" | cut -d ":" -f 2 | tr -d " '")
+        upower -i $DISPALYDEVICE | grep "icon-name" | cut -d ":" -f 2 | tr -d " '"
+    }
+    
+    percentage() {
+        upower -i $DISPALYDEVICE | grep "percentage" | cut -d ":" -f 2 | tr -d " %" | cut -d "," -f 1
+    }
+    
+    eta() {
+        upower -i $DISPALYDEVICE | grep "time" | cut -d ":" -f 2 | xargs echo
+    }
+    
+    [ "$1" = "icon" ] && symbol && exit
+    [ "$1" = "capacity" ] && percentage && exit
+    [ "$1" = "eta" ] && eta && exit
+    
+}
+
+main $@
