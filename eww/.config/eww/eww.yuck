@@ -31,7 +31,7 @@
 (box :orientation "h" :tooltip wifi-name :halign "end" :valign "center" :width 17
 	(button	
         ;; :timeout 10000
-        :onclick "foot -e nmtui &"
+        :onclick "footclient -T nmtui -e nmtui &"
 		:class "wifi-icon" 
         "${wifi-icon}")
 ))
